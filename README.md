@@ -16,7 +16,6 @@ Please replace the ${your_machine_ip} and ${your_mysql_ip} with your machine ip 
 git clone https://github.com/TarsCloud/TarsDocker.git
 docker pull mysql:5.6
 docker pull tarsdocker/tars
-mkdir -p /data/mysql-data
 docker run --name mysql -e MYSQL_ROOT_PASSWORD='root@appinside' -d -p 3306:3306 -v /data/mysql-data:/var/lib/mysql mysql:5.6
 docker run -d -it --name=tars --link mysql -e MOUNT_DATA=true -e DBIP=${your_mysql_ip} -e DBPort=3306 -e DBUser=root -e DBPassword=root@appinside -p 3000:3000 -v /data:/data tars
 ```
@@ -35,7 +34,6 @@ Please replace the ${your_machine_ip} and ${your_mysql_ip} with your machine ip 
 git clone https://github.com/TarsCloud/TarsDocker.git
 docker pull mysql:5.6
 docker pull tarsdocker/tarsnode
-mkdir -p /data/mysql-data
 docker run --name mysql -e MYSQL_ROOT_PASSWORD='root@appinside' -d -p 3306:3306 -v /data/mysql-data:/var/lib/mysql mysql:5.6
 docker run -d -it --name tarsnode --link mysql -e MOUNT_DATA=true -e DBIP=${your_mysql_ip} -e DBPort=3306 -e DBUser=root -e DBPassword=root@appinside -p 8080:8080 -v /data:/data tarsnode
 ```

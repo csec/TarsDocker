@@ -12,7 +12,7 @@ tarsnode: An image to run tarsnode for scale, supporting apps including cpp, jav
 ## Usage
 ### Quickstart
 Please replace the ${your_machine_ip} and ${your_mysql_ip} with your machine ip and your mysql ip, and then run the following commands.
-```
+```sh
 git clone https://github.com/TarsCloud/TarsDocker.git
 docker pull mysql:5.6
 docker pull tarsdocker/tars
@@ -23,10 +23,15 @@ Then access http://${your_machine_ip}:3000 to enjoy tars.
 
 ### Parameter explanation
 MYSQL_ROOT_PASSWORD: provide mysql root password for mysql docker
+
 DBIP: provide mysql host for tars docker
+
 DBPort: provide mysql's port for tars docker
+
 DBUser: provide mysql admin's username for tars docker
+
 DBPassword: provide mysql admin's password for tars docker
+
 
 ### Scale up tarsnode
 Please replace the ${your_machine_ip} and ${your_mysql_ip} with your machine ip and your mysql ip, and then run the following commands.

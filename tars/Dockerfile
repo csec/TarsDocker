@@ -21,7 +21,7 @@ RUN yum -y install http://repo.mysql.com/mysql-community-release-el7-5.noarch.rp
 	&& yum -y install epel-release \
 	&& yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm \
 	&& yum -y install yum-utils && yum-config-manager --enable remi-php72 \
-	&& yum -y install git gcc gcc-c++ golang make wget cmake mysql mysql-server mysql-devel unzip iproute which glibc-devel flex bison ncurses-devel protobuf-devel zlib-devel kde-l10n-Chinese glibc-common hiredis-devel rapidjson-devel boost boost-devel php php-cli php-devel php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-phpiredis php-seld-phar-utils tzdata telnet lsof net-tools gdb vim \
+	&& yum -y install git gcc gcc-c++ golang make wget cmake mysql mysql-devel unzip iproute which glibc-devel flex bison ncurses-devel protobuf-devel zlib-devel kde-l10n-Chinese glibc-common hiredis-devel rapidjson-devel boost boost-devel php php-cli php-devel php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-phpiredis php-seld-phar-utils tzdata telnet lsof net-tools gdb vim \
 	# Set timezone
 	&& ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
 	# Install MySQL8 C++ Connector

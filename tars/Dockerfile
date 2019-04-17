@@ -70,7 +70,7 @@ RUN yum -y install http://repo.mysql.com/mysql-community-release-el7-5.noarch.rp
 	&& npm install -g pm2 @tars/deploy @tars/stream @tars/rpc @tars/logs @tars/config @tars/monitor @tars/notify @tars/utils @tars/dyeing @tars/registry \
 	# Get and install JDK
 	&& mkdir -p /root/init && cd /root/init/ \
-	&& wget https://mirror.its.sfu.ca/mirror/CentOS-Third-Party/NSG/common/x86_64/jdk-10.0.2_linux-x64_bin.rpm \
+	&& wget https://mirror.its.sfu.ca/mirror/CentOS-Third-Party/RCG/common/x86_64/jdk-10.0.2_linux-x64_bin.rpm \
 	&& rpm -ivh /root/init/jdk-10.0.2_linux-x64_bin.rpm && rm -rf /root/init/jdk-10.0.2_linux-x64_bin.rpm \
 	&& echo "export JAVA_HOME=/usr/java/jdk-10.0.2" >> /etc/profile \
 	&& echo "CLASSPATH=\$JAVA_HOME/lib/dt.jar:\$JAVA_HOME/lib/tools.jar" >> /etc/profile \
